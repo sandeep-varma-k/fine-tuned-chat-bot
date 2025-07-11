@@ -25,6 +25,8 @@ with st.sidebar:
     st.title("Document Store")
     file = st.file_uploader(" Upload a PDF file(s) to fine tune your chatbot", type="pdf")
 
+if file is None:
+    st.warning("Please upload a PDF file in the Document Store on the left to proceed.")
 
 # Extract the text from pdf file
 if file is not None:
